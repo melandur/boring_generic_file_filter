@@ -1,4 +1,4 @@
-# boring_generic_file_filter
+# Boring generic file filter
 I'm tired of messy file and folder names, inconsistent file extensions, etc.
 
 # Paths
