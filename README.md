@@ -13,6 +13,6 @@ There are currently 3 filter classes implemented.
 - Extension
 
 The classes can handle multplie arguments.
-The classes can be connected arbitrarily with the binary operators (&, |, ~) (&=and, |=or, ~=not)
+The classes can be connected arbitrarily with the binary operators (&, |, ~)
 
 Not tested on Windows and Mac
