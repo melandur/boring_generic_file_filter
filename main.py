@@ -128,13 +128,17 @@ class RecursiveFileLister:
 
         extracted_paths = []
         for file_path in file_paths:
-            extracted_paths.append(self.extract_file_info(file_path))
+            item = self.extract_file_info(file_path)
+            if item:
+                extracted_paths.append(item)
         return extracted_paths
 
     @staticmethod
-    def extract_file_info(file_path: str) -> dict:
+    def extract_file_info(file_path: str) -> dict or None:
         """Extract file name, folder names and extension from a file path"""
         file_name = os.path.basename(file_path)
+        if not '.' in file_name:
+            return None
         file_base_name, extension = file_name.split('.', 1)
         folder_names = os.path.dirname(file_path).split(os.path.sep)  #
         folder_names = [x for x in folder_names if x]  # remove empty strings
